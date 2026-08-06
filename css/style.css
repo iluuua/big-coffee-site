@@ -14,6 +14,7 @@
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 76px; }
 body {
   font-family: "Manrope", "Segoe UI", system-ui, sans-serif;
   background: var(--bg);
@@ -90,7 +91,7 @@ header {
 
 /* Menu */
 .menu-section { background: var(--paper); color: var(--ink); }
-.menu-section .section-head .kicker { color: var(--amber-dark); }
+.menu-section .section-head .kicker { color: #8a6208; }
 .menu-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 30px; }
 .menu-tab {
   font-family: "Oswald", sans-serif; text-transform: uppercase; font-size: .95rem; font-weight: 600;
@@ -108,6 +109,7 @@ header {
 .menu-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 48px; }
 .menu-group h3 { font-size: 1.15rem; font-weight: 600; margin: 26px 0 12px; color: var(--ink); }
 .menu-group h3:first-child { margin-top: 0; }
+.menu-group.col-continued { padding-top: 41px; }
 .mi { display: flex; align-items: baseline; gap: 8px; padding: 6px 0; border-bottom: 1px dashed #d8d2c4; }
 .mi:last-child { border-bottom: 0; }
 .mi .n { font-weight: 600; font-size: .95rem; }
@@ -115,15 +117,15 @@ header {
 .mi .vol { color: var(--ink-soft); font-size: .8rem; white-space: nowrap; }
 .mi .dots { flex: 1; border-bottom: 1px dotted #b9b1a0; transform: translateY(-4px); min-width: 14px; }
 .mi .p { font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
-.mi .p small { font-weight: 500; color: var(--ink-soft); }
 /* two-price table (автомат / профи) */
-.mtable { width: 100%; border-collapse: collapse; }
+.mtable-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.mtable { width: 100%; min-width: 540px; border-collapse: collapse; }
 .mtable th { font-family: "Oswald", sans-serif; text-transform: uppercase; font-size: .8rem; letter-spacing: .08em; text-align: right; padding: 8px 0 8px 16px; color: var(--ink-soft); }
 .mtable th:first-child { text-align: left; padding-left: 0; }
 .mtable td { padding: 8px 0 8px 16px; border-top: 1px dashed #d8d2c4; text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .mtable td:first-child { text-align: left; font-weight: 600; padding-left: 0; white-space: normal; }
 .mtable td .vol { color: var(--ink-soft); font-weight: 400; font-size: .8rem; margin-left: 6px; white-space: nowrap; }
-.mtable td.na { color: #c4bcac; font-weight: 400; }
+.mtable td.na { color: var(--ink-soft); font-weight: 400; }
 .menu-cat-photo { border-radius: var(--radius); overflow: hidden; margin-bottom: 26px; }
 .menu-cat-photo img { width: 100%; height: 240px; object-fit: cover; }
 .dessert-note { color: var(--ink-soft); font-size: .95rem; max-width: 640px; margin-bottom: 22px; }
@@ -180,6 +182,7 @@ footer { border-top: 1px solid var(--line); padding: 34px 0; }
 @media (max-width: 900px) {
   .about-grid, .contacts-grid { grid-template-columns: 1fr; }
   .menu-cols { grid-template-columns: 1fr; }
+  .menu-group.col-continued { padding-top: 0; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .reviews-grid { grid-template-columns: 1fr; }
   .nav-links {

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Кофейня «Большой кофе» — Волгоград, Рабоче-Крестьянская, 2 | Кофе, десерты, сэндвичи</title>
-<meta name="description" content="Кофейня «Большой кофе» в Ворошиловском районе Волгограда: авторский кофе, десерты собственного производства, сэндвичи и лимонады. Рейтинг 5,0 на Яндекс Картах. Ежедневно с 8:00 до 22:00. Рабоче-Крестьянская ул., 2.">
+<title>Кофейня «Большой кофе» — Волгоград, Рабоче-Крестьянская, 2</title>
+<meta name="description" content="Кофейня «Большой кофе» в Волгограде, Рабоче-Крестьянская, 2. Ежедневно 8:00–22:00. Кофе, десерты своего производства, сэндвичи. Рейтинг 5,0 на Яндекс Картах.">
 <meta name="keywords" content="кофейня Волгоград, Большой кофе, кофе с собой Волгоград, кофейня Ворошиловский район, десерты Волгоград, сэндвичи, кондитерская Волгоград, кофе навынос">
 <link rel="canonical" href="https://iluuua.github.io/big-coffee-site/">
 <meta property="og:type" content="website">
@@ -20,7 +20,7 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap&subset=cyrillic" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <script type="application/ld+json">
 {
@@ -37,6 +37,7 @@
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Рабоче-Крестьянская ул., 2",
+    "postalCode": "400074",
     "addressLocality": "Волгоград",
     "addressRegion": "Волгоградская область",
     "addressCountry": "RU"
@@ -47,13 +48,6 @@
     "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
     "opens": "08:00",
     "closes": "22:00"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "bestRating": "5",
-    "ratingCount": "45",
-    "reviewCount": "34"
   },
   "sameAs": ["https://yandex.ru/maps/org/bolshoy_kofe/175599201104/"],
   "amenityFeature": [
@@ -136,7 +130,7 @@
         <div class="kicker">Меню</div>
         <h2>Что попробовать</h2>
       </div>
-      <div class="menu-tabs" role="tablist">
+      <div class="menu-tabs">
         <button class="menu-tab active" data-pane="pane-hot">Горячие напитки</button>
         <button class="menu-tab" data-pane="pane-tea">Чаи и пунши</button>
         <button class="menu-tab" data-pane="pane-cold">Холодные напитки</button>
@@ -148,6 +142,7 @@
       <!-- Горячие напитки -->
       <div class="menu-pane active" id="pane-hot">
         <div class="menu-note">Любой кофе на альтернативном или безлактозном молоке — +60 ₽ к стоимости</div>
+        <div class="mtable-wrap">
         <table class="mtable">
           <thead>
             <tr><th>Напиток</th><th>Автоматическая кофемашина</th><th>Профессиональная кофемашина</th></tr>
@@ -162,15 +157,16 @@
             <tr><td>Большой матча-латте<span class="vol">400 мл</span></td><td>210 ₽</td><td>275 ₽</td></tr>
             <tr><td>Большой раф<span class="vol">350 мл</span></td><td>245 ₽</td><td>285 ₽</td></tr>
             <tr><td>Флэт уайт<span class="vol">300 мл</span></td><td>205 ₽</td><td>240 ₽</td></tr>
-            <tr><td>Кофе по-венски<span class="vol">250/450 и 220/400 мл</span></td><td>210 / 230 ₽</td><td>235 / 285 ₽</td></tr>
+            <tr><td>Кофе по-венски<span class="vol">автомат 250/450 мл · профи 220/400 мл</span></td><td>210 / 230 ₽</td><td>235 / 285 ₽</td></tr>
             <tr><td>Красный глаз<span class="vol">180 мл</span></td><td>180 ₽</td><td>200 ₽</td></tr>
-            <tr><td>Ройбучино<span class="vol">250/400 мл</span></td><td class="na">—</td><td>210 / 250 ₽</td></tr>
-            <tr><td>Какао<span class="vol">400 мл</span></td><td class="na">—</td><td>220 ₽</td></tr>
-            <tr><td>Дабл какао<span class="vol">400 мл</span></td><td class="na">—</td><td>280 ₽</td></tr>
-            <tr><td>Snickers Hot<span class="vol">400 мл</span></td><td class="na">—</td><td>290 ₽</td></tr>
-            <tr><td>Горячий шоколад<span class="vol">150 мл</span></td><td class="na">—</td><td>260 ₽</td></tr>
+            <tr><td>Ройбучино<span class="vol">250/400 мл</span></td><td class="na" aria-label="нет">—</td><td>210 / 250 ₽</td></tr>
+            <tr><td>Какао<span class="vol">400 мл</span></td><td class="na" aria-label="нет">—</td><td>220 ₽</td></tr>
+            <tr><td>Дабл какао<span class="vol">400 мл</span></td><td class="na" aria-label="нет">—</td><td>280 ₽</td></tr>
+            <tr><td>Snickers Hot<span class="vol">400 мл</span></td><td class="na" aria-label="нет">—</td><td>290 ₽</td></tr>
+            <tr><td>Горячий шоколад<span class="vol">150 мл</span></td><td class="na" aria-label="нет">—</td><td>260 ₽</td></tr>
           </tbody>
         </table>
+        </div>
         <div class="menu-cols" style="margin-top:34px">
           <div class="menu-group">
             <h3>Добавки к напиткам</h3>
@@ -259,8 +255,7 @@
             <div class="mi"><span class="n">Гренадин-лаванда</span><span class="vol">450 мл</span><span class="dots"></span><span class="p">180 ₽</span></div>
             <div class="mi"><span class="n">Пина колада</span><span class="vol">450 мл</span><span class="dots"></span><span class="p">180 ₽</span></div>
           </div>
-          <div class="menu-group">
-            <h3>&nbsp;</h3>
+          <div class="menu-group col-continued">
             <div class="mi"><span class="n">Мохито / клубничный</span><span class="vol">450 мл</span><span class="dots"></span><span class="p">200 ₽</span></div>
             <div class="mi"><span class="n">Малина-маракуйя</span><span class="vol">450 мл</span><span class="dots"></span><span class="p">200 ₽</span></div>
             <div class="mi"><span class="n">Малиновый грейпфрут</span><span class="vol">450 мл</span><span class="dots"></span><span class="p">200 ₽</span></div>
@@ -440,7 +435,7 @@
           </div>
           <div class="contact-item">
             <div class="lbl">Хорошо знать</div>
-            <div class="hint">Еда навынос и кофе с собой · Можно с собакой · Оплата картой</div>
+            <div class="hint">Еда навынос и кофе с собой · Можно с собакой</div>
           </div>
           <div style="margin-top:26px; display:flex; gap:12px; flex-wrap:wrap">
             <a class="btn btn-solid" href="tel:+79275205777">Позвонить</a>
