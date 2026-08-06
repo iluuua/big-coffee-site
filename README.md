@@ -2,21 +2,40 @@
 
 Одностраничный сайт кофейни «Большой кофе» — Рабоче-Крестьянская ул., 2, Волгоград (Ворошиловский район).
 
-**Live (канонический):** https://iluuua.github.io/big-coffee-site/
+**Live:** https://bolshoy-kofe.82-39-214-82.sslip.io/
+(зеркало того же сайта: https://bolshoy-kofe.82.39.214.82.nip.io/)
 
-**Временное превью** (пока GitHub Pages в аварии 06.08.2026): статика раздаётся
-контейнером на VPS 82.39.214.82 (`/opt/bigcoffee`, docker compose: nginx + cloudflared),
-публичный адрес — исходящий quick-туннель Cloudflare. Узнать текущий URL:
+## Хостинг
+
+Свой VPS HostKey 82.39.214.82. Статика лежит в `/opt/bigcoffee/site`, раздаёт
+nginx-контейнер `bigcoffee-web-1` (`/opt/bigcoffee/docker-compose.yml`), наружу
+выходит через уже работающий на 80/443 Caddy — отдельным блоком в
+`/opt/reachvpn-control/infra/caddy/Caddyfile`. Портов на хосте не публикуем,
+фаервол не меняем. HTTPS — Let's Encrypt, продлевается Caddy автоматически.
+
+Имена `*.sslip.io` / `*.nip.io` — публичный wildcard-DNS, который резолвится
+в IP из самого имени. Аккаунт и оплата не нужны, адрес постоянный, пока не
+меняется IP сервера.
+
+### Выкатить изменения
 
 ```bash
-ssh -i ~/.ssh/reach-control-us root@82.39.214.82 /opt/bigcoffee/url.sh
+rsync -az --delete -e "ssh -i ~/.ssh/reach-control-us" --exclude .git --exclude .DS_Store ./ root@82.39.214.82:/opt/bigcoffee/site/
 ```
 
-URL меняется при перезапуске контейнера туннеля. Обновить содержимое превью:
+Кэша нет, изменения видны сразу после rsync.
 
-```bash
-rsync -az --delete -e "ssh -i ~/.ssh/reach-control-us" --exclude .git ./ root@82.39.214.82:/opt/bigcoffee/site/
-```
+### Переезд на собственный домен
+
+1. A-запись домена → `82.39.214.82`.
+2. Дописать домен в список имён блока «Большой кофе» в Caddyfile:
+   `bolshoy-kofe.82-39-214-82.sslip.io, bolshoy-kofe.82.39.214.82.nip.io, example.ru, www.example.ru { ... }`
+3. `docker exec reachvpn-control-caddy-1 caddy reload --config /etc/caddy/Caddyfile`
+   — сертификат выпустится сам, старые адреса продолжат работать.
+4. Заменить домен в `canonical`, `og:url`, `og:image`, JSON-LD (`url`/`image`/`logo`),
+   `sitemap.xml`, `robots.txt` и выкатить rsync-ом.
+
+Бэкапы Caddyfile перед правкой — рядом с ним, файлы `Caddyfile.bak.bigcoffee-*`.
 
 ## Факты (источник — Яндекс Карты, 06.08.2026)
 

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://iluuua.github.io/big-coffee-site/sitemap.xml
+Sitemap: https://bolshoy-kofe.82-39-214-82.sslip.io/sitemap.xml
