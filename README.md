@@ -2,7 +2,21 @@
 
 Одностраничный сайт кофейни «Большой кофе» — Рабоче-Крестьянская ул., 2, Волгоград (Ворошиловский район).
 
-**Live:** https://iluuua.github.io/big-coffee-site/
+**Live (канонический):** https://iluuua.github.io/big-coffee-site/
+
+**Временное превью** (пока GitHub Pages в аварии 06.08.2026): статика раздаётся
+контейнером на VPS 82.39.214.82 (`/opt/bigcoffee`, docker compose: nginx + cloudflared),
+публичный адрес — исходящий quick-туннель Cloudflare. Узнать текущий URL:
+
+```bash
+ssh -i ~/.ssh/reach-control-us root@82.39.214.82 /opt/bigcoffee/url.sh
+```
+
+URL меняется при перезапуске контейнера туннеля. Обновить содержимое превью:
+
+```bash
+rsync -az --delete -e "ssh -i ~/.ssh/reach-control-us" --exclude .git ./ root@82.39.214.82:/opt/bigcoffee/site/
+```
 
 ## Факты (источник — Яндекс Карты, 06.08.2026)
 
