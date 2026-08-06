@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://iluuua.github.io/big-coffee-site/sitemap.xml
