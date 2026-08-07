@@ -5,6 +5,7 @@
   --line: #3a352f;
   --amber: #f2a81d;
   --amber-dark: #d99413;
+  --amber-ink: #8a6208; /* контрастный янтарный для текста на светлом фоне */
   --cream: #f6f0e7;
   --muted: #b5ab9d;
   --paper: #f3f1ec;
@@ -27,6 +28,7 @@ h1, h2, h3, .btn { font-family: "Oswald", "Arial Narrow", sans-serif; text-trans
 h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 600; }
 .container { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
 section { padding: 72px 0; }
+section[id] { scroll-margin-top: 72px; }
 .section-head { margin-bottom: 36px; }
 .section-head .kicker { color: var(--amber); font-weight: 700; font-size: .85rem; text-transform: uppercase; letter-spacing: .14em; }
 .btn {
@@ -98,7 +100,7 @@ header {
   letter-spacing: .05em; padding: 10px 18px; border-radius: 999px; border: 1.5px solid #c9c2b4;
   background: transparent; color: var(--ink); cursor: pointer; transition: .15s;
 }
-.menu-tab:hover { border-color: var(--amber-dark); color: var(--amber-dark); }
+.menu-tab:hover { border-color: var(--amber-ink); color: var(--amber-ink); }
 .menu-tab.active { background: var(--ink); border-color: var(--ink); color: var(--paper); }
 .menu-pane { display: none; }
 .menu-pane.active { display: block; }
@@ -147,7 +149,7 @@ header {
 .aspects { flex: 1; min-width: 260px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 28px; }
 .aspect { font-size: .9rem; color: var(--muted); }
 .aspect .bar { height: 6px; background: var(--line); border-radius: 3px; margin-top: 4px; overflow: hidden; }
-.aspect .bar i { display: block; height: 100%; width: 100%; background: var(--amber); border-radius: 3px; }
+.aspect .bar i { display: block; height: 100%; background: var(--amber); border-radius: 3px; }
 .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .review {
   background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
