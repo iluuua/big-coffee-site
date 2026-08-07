@@ -3,21 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Кофейня «Большой кофе» — Волжский, ул. Мира, 112</title>
-<meta name="description" content="Кофейня «Большой кофе» в Волжском, ул. Мира, 112. Ежедневно 7:00–23:00. Авторский кофе, десерты и сэндвичи своего производства. Рейтинг 5,0 на Яндекс Картах.">
-<meta name="keywords" content="кофейня Волжский, Большой кофе, кофе с собой Волжский, 31 микрорайон, десерты Волжский, сэндвичи, кондитерская, кофейня рядом со мной">
+<title>Кофейня «Большой кофе» — Волжский и Волгоград</title>
+<meta name="description" content="Кофейня «Большой кофе»: Волжский, ул. Мира, 112 и Волгоград, пр. Ленина, 92. Авторский кофе, десерты и сэндвичи своего производства. Рейтинг 5,0 на Яндекс Картах.">
+<meta name="keywords" content="кофейня Волжский, кофейня Волгоград, Большой кофе, кофе с собой, 31 микрорайон, проспект Ленина, десерты, сэндвичи, кондитерская">
 <link rel="canonical" href="https://iluuua.github.io/big-coffee-site/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
-<meta property="og:title" content="Кофейня «Большой кофе» — Волжский">
-<meta property="og:description" content="Авторский кофе, десерты и сэндвичи собственного производства. Ежедневно 7:00–23:00. Волжский, ул. Мира, 112.">
+<meta property="og:title" content="Кофейня «Большой кофе» — Волжский и Волгоград">
+<meta property="og:description" content="Авторский кофе, десерты и сэндвичи своего производства. Волжский, ул. Мира, 112 · Волгоград, пр. Ленина, 92.">
 <meta property="og:url" content="https://iluuua.github.io/big-coffee-site/">
 <meta property="og:image" content="https://iluuua.github.io/big-coffee-site/assets/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Зал кофейни «Большой кофе»">
 <meta property="og:site_name" content="Большой кофе">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/hero.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -25,37 +29,60 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "CafeOrCoffeeShop",
-  "name": "Большой кофе",
-  "description": "Кофейня и кондитерская в Волжском: авторский кофе, десерты и сэндвичи собственного производства, чаи, лимонады. Еда навынос, доставка, парковка, можно с собакой.",
-  "url": "https://iluuua.github.io/big-coffee-site/",
-  "image": "https://iluuua.github.io/big-coffee-site/assets/og-cover.jpg",
-  "logo": "https://iluuua.github.io/big-coffee-site/assets/logo.png",
-  "telephone": "+79370981101",
-  "priceRange": "₽₽",
-  "servesCuisine": ["Кофе", "Десерты", "Сэндвичи"],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "ул. Мира, 112",
-    "postalCode": "404118",
-    "addressLocality": "Волжский",
-    "addressRegion": "Волгоградская область",
-    "addressCountry": "RU"
-  },
-  "geo": { "@type": "GeoCoordinates", "latitude": 48.759878, "longitude": 44.815889 },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "07:00",
-    "closes": "23:00"
-  },
-  "sameAs": ["https://yandex.ru/maps/org/bolshoy_kofe/24043248419/"],
-  "amenityFeature": [
-    { "@type": "LocationFeatureSpecification", "name": "Еда навынос", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Доставка", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Парковка", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Оплата картой", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Можно с собакой", "value": true }
+  "@graph": [
+    {
+      "@type": "CafeOrCoffeeShop",
+      "@id": "https://iluuua.github.io/big-coffee-site/#volzhsky",
+      "name": "Большой кофе — Волжский",
+      "description": "Кофейня и кондитерская в Волжском: авторский кофе, десерты и сэндвичи, чаи, лимонады. Еда навынос, доставка, парковка, можно с собакой.",
+      "url": "https://iluuua.github.io/big-coffee-site/",
+      "image": "https://iluuua.github.io/big-coffee-site/assets/og-cover.jpg",
+      "logo": "https://iluuua.github.io/big-coffee-site/assets/logo.png",
+      "telephone": "+79370981101",
+      "priceRange": "₽₽",
+      "servesCuisine": ["Кофе", "Десерты", "Сэндвичи"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Мира, 112",
+        "postalCode": "404118",
+        "addressLocality": "Волжский",
+        "addressRegion": "Волгоградская область",
+        "addressCountry": "RU"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 48.759878, "longitude": 44.815889 },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "07:00",
+        "closes": "23:00"
+      },
+      "sameAs": ["https://yandex.ru/maps/org/bolshoy_kofe/24043248419/"],
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Еда навынос", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Доставка", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Парковка", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Оплата картой", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Можно с собакой", "value": true }
+      ]
+    },
+    {
+      "@type": "CafeOrCoffeeShop",
+      "@id": "https://iluuua.github.io/big-coffee-site/#volgograd",
+      "name": "Большой кофе — Волгоград",
+      "description": "Кофейня «Большой кофе» на проспекте имени В. И. Ленина в Волгограде.",
+      "url": "https://iluuua.github.io/big-coffee-site/",
+      "image": "https://iluuua.github.io/big-coffee-site/assets/og-cover.jpg",
+      "logo": "https://iluuua.github.io/big-coffee-site/assets/logo.png",
+      "priceRange": "₽₽",
+      "servesCuisine": ["Кофе", "Десерты", "Сэндвичи"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "проспект имени В. И. Ленина, 92",
+        "addressLocality": "Волгоград",
+        "addressRegion": "Волгоградская область",
+        "addressCountry": "RU"
+      }
+    }
   ]
 }
 </script>
@@ -81,18 +108,17 @@
   <!-- HERO -->
   <section class="hero">
     <div class="container hero-inner">
-      <div class="rating"><span class="stars">★★★★★</span> 5,0 · 460 оценок на Яндекс Картах</div>
+      <div class="rating"><span class="stars" aria-hidden="true">★★★★★</span><span class="sr-only">Оценка 5 из 5.</span> 5,0 · 460 оценок на Яндекс Картах</div>
       <h1>Большой <span>кофе</span></h1>
-      <p class="tagline">«У нас с кофе большие отношения» — кофейня и кондитерская в Волжском, в 31-м микрорайоне.</p>
-      <p class="sub">Авторский кофе, десерты и сэндвичи собственного производства. С 2017 года.</p>
+      <p class="tagline">«У нас с кофе большие отношения» — кофейня и кондитерская в Волжском и Волгограде.</p>
+      <p class="sub">Авторский кофе, десерты и сэндвичи своего производства. С 2017 года.</p>
       <div class="cta">
         <a class="btn btn-solid" href="#menu">Смотреть меню</a>
-        <a class="btn btn-ghost" href="#contacts">Как добраться</a>
+        <a class="btn btn-ghost" href="#contacts">Адреса</a>
       </div>
       <div class="facts">
-        <span class="chip">Ежедневно <b>7:00–23:00</b></span>
-        <span class="chip">ул. Мира, 112</span>
-        <span class="chip">Своя парковка</span>
+        <span class="chip">Волжский, <b>ул. Мира, 112</b></span>
+        <span class="chip">Волгоград, <b>пр. Ленина, 92</b></span>
         <span class="chip">Кофе с собой</span>
         <span class="chip">Можно с собакой 🐕</span>
       </div>
@@ -105,11 +131,11 @@
       <div>
         <div class="section-head">
           <div class="kicker">О кофейне</div>
-          <h2>Большая кофейня в новой части города</h2>
+          <h2>Две кофейни — в Волжском и Волгограде</h2>
         </div>
-        <p>«Большой кофе» — это <strong>просторный светлый зал с живыми растениями, мягкими креслами и авторскими картинами</strong>. Здесь одинаково удобно забежать за стаканчиком по дороге, посидеть с друзьями или поработать за ноутбуком: есть розетки у столов, места для компании и уголки на одного.</p>
+        <p>Наша большая кофейня в Волжском — это <strong>просторный светлый зал с живыми растениями, мягкими креслами и авторскими картинами</strong>. Здесь одинаково удобно забежать за стаканчиком по дороге, посидеть с друзьями или поработать за ноутбуком: есть розетки у столов, места для компании и уголки на одного. В Волгограде на проспекте Ленина работает наша уютная небольшая точка — с тем же кофе и той же выпечкой.</p>
         <p>Мы варим кофе на выбор — на автоматической или профессиональной кофемашине, — а <strong>десерты и выпечку готовим сами</strong>. Наполеон, медовик, морковный торт, эклеры и печенье каждый день свежие. Отдельная гордость — авторские сэндвичи и кофейные лимонады.</p>
-        <p>Завтракаем с 7 утра и работаем до 11 вечера. Любой напиток можно взять с собой, а заказ — оформить на доставку.</p>
+        <p>В Волжском завтракаем с 7 утра и работаем до 11 вечера. Любой напиток можно взять с собой, а заказ — оформить на доставку.</p>
         <div class="features">
           <span class="chip">Кофейня и кондитерская</span>
           <span class="chip">Завтраки с 7:00</span>
@@ -120,7 +146,7 @@
           <span class="chip">Подарочные сертификаты</span>
           <span class="chip">Альтернативное молоко</span>
         </div>
-        <p class="badge-note"><strong>КофеБаксы</strong> — наша кофейная валюта, которой уже много лет расплачиваются постоянные гости. Ей можно и поделиться с другом — как получить, спросите у бариста.</p>
+        <p class="badge-note"><strong>КофеБаксы</strong> — наша кофейная валюта, которой уже много лет расплачиваются гости в наших заведениях. Её можно и подарить другу — как получить, спросите у бариста.</p>
       </div>
       <div class="about-photo">
         <img src="assets/g-interior.jpg" alt="Зал кофейни «Большой кофе» в Волжском: мягкие кресла и неоновая надпись" loading="lazy">
@@ -135,17 +161,17 @@
         <div class="kicker">Меню</div>
         <h2>Что попробовать</h2>
       </div>
-      <div class="menu-tabs">
-        <button class="menu-tab active" data-pane="pane-hot">Горячие напитки</button>
-        <button class="menu-tab" data-pane="pane-tea">Чаи и пунши</button>
-        <button class="menu-tab" data-pane="pane-cold">Холодные напитки</button>
-        <button class="menu-tab" data-pane="pane-lemonade">Лимонады</button>
-        <button class="menu-tab" data-pane="pane-sandwich">Сэндвичи</button>
-        <button class="menu-tab" data-pane="pane-dessert">Десерты</button>
+      <div class="menu-tabs" role="tablist" aria-label="Категории меню">
+        <button class="menu-tab active" type="button" role="tab" id="tab-pane-hot" aria-controls="pane-hot" aria-selected="true" data-pane="pane-hot">Горячие напитки</button>
+        <button class="menu-tab" type="button" role="tab" id="tab-pane-tea" aria-controls="pane-tea" aria-selected="false" data-pane="pane-tea">Чаи и пунши</button>
+        <button class="menu-tab" type="button" role="tab" id="tab-pane-cold" aria-controls="pane-cold" aria-selected="false" data-pane="pane-cold">Холодные напитки</button>
+        <button class="menu-tab" type="button" role="tab" id="tab-pane-lemonade" aria-controls="pane-lemonade" aria-selected="false" data-pane="pane-lemonade">Лимонады</button>
+        <button class="menu-tab" type="button" role="tab" id="tab-pane-sandwich" aria-controls="pane-sandwich" aria-selected="false" data-pane="pane-sandwich">Сэндвичи</button>
+        <button class="menu-tab" type="button" role="tab" id="tab-pane-dessert" aria-controls="pane-dessert" aria-selected="false" data-pane="pane-dessert">Десерты</button>
       </div>
 
       <!-- Горячие напитки -->
-      <div class="menu-pane active" id="pane-hot">
+      <div class="menu-pane active" id="pane-hot" role="tabpanel" aria-labelledby="tab-pane-hot" tabindex="0">
         <div class="menu-note">Любой кофе на альтернативном или безлактозном молоке — +60 ₽ к стоимости</div>
         <div class="mtable-wrap">
         <table class="mtable">
@@ -153,22 +179,22 @@
             <tr><th>Напиток</th><th>Автоматическая кофемашина</th><th>Профессиональная кофемашина</th></tr>
           </thead>
           <tbody>
-            <tr><td>Эспрессо<span class="vol">30/60 мл</span></td><td>140 / 160 ₽</td><td>155 / 180 ₽</td></tr>
-            <tr><td>Американо<span class="vol">150/300 мл</span></td><td>160 / 180 ₽</td><td>180 / 200 ₽</td></tr>
-            <tr><td>Капучино<span class="vol">250/400 мл</span></td><td>180 / 200 ₽</td><td>210 / 250 ₽</td></tr>
-            <tr><td>Большой латте<span class="vol">400 мл</span></td><td>200 ₽</td><td>250 ₽</td></tr>
-            <tr><td>Большой латте солёный арахис<span class="vol">400 мл</span></td><td>270 ₽</td><td>295 ₽</td></tr>
-            <tr><td>Большой латте со сливками<span class="vol">400 мл</span></td><td>270 ₽</td><td>295 ₽</td></tr>
-            <tr><td>Большой матча-латте<span class="vol">400 мл</span></td><td>210 ₽</td><td>275 ₽</td></tr>
-            <tr><td>Большой раф<span class="vol">350 мл</span></td><td>245 ₽</td><td>285 ₽</td></tr>
-            <tr><td>Флэт уайт<span class="vol">300 мл</span></td><td>205 ₽</td><td>240 ₽</td></tr>
-            <tr><td>Кофе по-венски<span class="vol">автомат 250/450 мл · профи 220/400 мл</span></td><td>210 / 230 ₽</td><td>235 / 285 ₽</td></tr>
-            <tr><td>Красный глаз<span class="vol">180 мл</span></td><td>180 ₽</td><td>200 ₽</td></tr>
-            <tr><td>Ройбучино<span class="vol">250/400 мл</span></td><td class="na">нет</td><td>210 / 250 ₽</td></tr>
-            <tr><td>Какао<span class="vol">400 мл</span></td><td class="na">нет</td><td>220 ₽</td></tr>
-            <tr><td>Дабл какао<span class="vol">400 мл</span></td><td class="na">нет</td><td>280 ₽</td></tr>
-            <tr><td>Snickers Hot<span class="vol">400 мл</span></td><td class="na">нет</td><td>290 ₽</td></tr>
-            <tr><td>Горячий шоколад<span class="vol">150 мл</span></td><td class="na">нет</td><td>260 ₽</td></tr>
+            <tr><td>Эспрессо<span class="vol">30/60 мл</span></td><td data-label="Автоматическая кофемашина">140 / 160 ₽</td><td data-label="Профессиональная кофемашина">155 / 180 ₽</td></tr>
+            <tr><td>Американо<span class="vol">150/300 мл</span></td><td data-label="Автоматическая кофемашина">160 / 180 ₽</td><td data-label="Профессиональная кофемашина">180 / 200 ₽</td></tr>
+            <tr><td>Капучино<span class="vol">250/400 мл</span></td><td data-label="Автоматическая кофемашина">180 / 200 ₽</td><td data-label="Профессиональная кофемашина">210 / 250 ₽</td></tr>
+            <tr><td>Большой латте<span class="vol">400 мл</span></td><td data-label="Автоматическая кофемашина">200 ₽</td><td data-label="Профессиональная кофемашина">250 ₽</td></tr>
+            <tr><td>Большой латте солёный арахис<span class="vol">400 мл</span></td><td data-label="Автоматическая кофемашина">270 ₽</td><td data-label="Профессиональная кофемашина">295 ₽</td></tr>
+            <tr><td>Большой латте со сливками<span class="vol">400 мл</span></td><td data-label="Автоматическая кофемашина">270 ₽</td><td data-label="Профессиональная кофемашина">295 ₽</td></tr>
+            <tr><td>Большой матча-латте<span class="vol">400 мл</span></td><td data-label="Автоматическая кофемашина">210 ₽</td><td data-label="Профессиональная кофемашина">275 ₽</td></tr>
+            <tr><td>Большой раф<span class="vol">350 мл</span></td><td data-label="Автоматическая кофемашина">245 ₽</td><td data-label="Профессиональная кофемашина">285 ₽</td></tr>
+            <tr><td>Флэт уайт<span class="vol">300 мл</span></td><td data-label="Автоматическая кофемашина">205 ₽</td><td data-label="Профессиональная кофемашина">240 ₽</td></tr>
+            <tr><td>Кофе по-венски<span class="vol">автомат 250/450 мл · профи 220/400 мл</span></td><td data-label="Автоматическая кофемашина">210 / 230 ₽</td><td data-label="Профессиональная кофемашина">235 / 285 ₽</td></tr>
+            <tr><td>Красный глаз<span class="vol">180 мл</span></td><td data-label="Автоматическая кофемашина">180 ₽</td><td data-label="Профессиональная кофемашина">200 ₽</td></tr>
+            <tr><td>Ройбучино<span class="vol">250/400 мл</span></td><td data-label="Автоматическая кофемашина"> class="na">нет</td><td data-label="Профессиональная кофемашина">210 / 250 ₽</td></tr>
+            <tr><td>Какао<span class="vol">400 мл</span></td><td data-label="Автоматическая кофемашина"> class="na">нет</td><td data-label="Профессиональная кофемашина">220 ₽</td></tr>
+            <tr><td>Дабл какао<span class="vol">400 мл</span></td><td data-label="Автоматическая кофемашина"> class="na">нет</td><td data-label="Профессиональная кофемашина">280 ₽</td></tr>
+            <tr><td>Snickers Hot<span class="vol">400 мл</span></td><td data-label="Автоматическая кофемашина"> class="na">нет</td><td data-label="Профессиональная кофемашина">290 ₽</td></tr>
+            <tr><td>Горячий шоколад<span class="vol">150 мл</span></td><td data-label="Автоматическая кофемашина"> class="na">нет</td><td data-label="Профессиональная кофемашина">260 ₽</td></tr>
           </tbody>
         </table>
         </div>
@@ -189,7 +215,7 @@
       </div>
 
       <!-- Чаи и пунши -->
-      <div class="menu-pane" id="pane-tea">
+      <div class="menu-pane" id="pane-tea" role="tabpanel" aria-labelledby="tab-pane-tea" tabindex="0">
         <div class="menu-cols">
           <div class="menu-group">
             <h3>Чаи и пунши</h3>
@@ -199,7 +225,7 @@
             <div class="mi"><span class="n">Облепиховый чай</span><span class="vol">400 мл</span><span class="dots"></span><span class="p">220 ₽</span></div>
             <div class="mi"><span class="n">Вишнёвый пунш</span><span class="vol">400 мл</span><span class="dots"></span><span class="p">210 ₽</span></div>
             <div class="mi"><span class="n">Глинтвейн б/а</span><span class="vol">400 мл</span><span class="dots"></span><span class="p">210 ₽</span></div>
-            <div class="mi"><span class="n">Марокканский мятный чай</span><span class="vol">400 мл</span><span class="dots"></span><span class="p">220 ₽</span></div>
+            <div class="mi"><span class="n">Марокканский мятный чай</span><span class="vol">400 мл</span><span class="dots"></span><span class="p">230 ₽</span></div>
             <div class="mi"><span class="n">Малина-имбирь</span><span class="vol">400 мл</span><span class="dots"></span><span class="p">200 ₽</span></div>
             <div class="mi"><span class="n">Лимон-имбирь</span><span class="vol">400 мл</span><span class="dots"></span><span class="p">200 ₽</span></div>
             <div class="mi"><span class="n">Пряный пунш</span><span class="vol">400 мл</span><span class="dots"></span><span class="p">200 ₽</span></div>
@@ -210,7 +236,7 @@
       </div>
 
       <!-- Холодные напитки -->
-      <div class="menu-pane" id="pane-cold">
+      <div class="menu-pane" id="pane-cold" role="tabpanel" aria-labelledby="tab-pane-cold" tabindex="0">
         <div class="menu-cols">
           <div class="menu-group">
             <h3>Кофе и матча со льдом</h3>
@@ -243,7 +269,7 @@
       </div>
 
       <!-- Лимонады -->
-      <div class="menu-pane" id="pane-lemonade">
+      <div class="menu-pane" id="pane-lemonade" role="tabpanel" aria-labelledby="tab-pane-lemonade" tabindex="0">
         <div class="menu-cols">
           <div class="menu-group">
             <h3>Лимонады</h3>
@@ -278,7 +304,7 @@
       </div>
 
       <!-- Сэндвичи -->
-      <div class="menu-pane" id="pane-sandwich">
+      <div class="menu-pane" id="pane-sandwich" role="tabpanel" aria-labelledby="tab-pane-sandwich" tabindex="0">
         <div class="menu-note">Готовим на ваш выбор: в лепёшке, в хлебе или в булочке</div>
         <div class="menu-cols">
           <div class="menu-group">
@@ -318,19 +344,19 @@
             <div class="mi"><span class="n">Крем-сыр</span><span class="dots"></span><span class="p">55 ₽</span></div>
             <div class="mi"><span class="n">Моцарелла</span><span class="dots"></span><span class="p">55 ₽</span></div>
             <div class="mi"><span class="n">Мясо</span><span class="dots"></span><span class="p">70 ₽</span></div>
-            <div class="menu-cat-photo" style="margin-top:22px"><img src="assets/g-sandwich2.jpg" alt="Клаб-сэндвич в фирменной упаковке" loading="lazy"></div>
+            <div class="menu-cat-photo" style="margin-top:22px"><img src="assets/g-sandwich2.jpg" alt="Сэндвич навынос в крафтовой коробке" loading="lazy"></div>
           </div>
         </div>
       </div>
 
       <!-- Десерты -->
-      <div class="menu-pane" id="pane-dessert">
-        <p class="dessert-note">Десерты и выпечка — собственного производства, витрина обновляется каждый день. Наполеон, медовик, морковный торт, «Орео», «Рафаэлло», «Манхэттен», эклеры и печенье. Актуальный ассортимент и цены уточняйте у бариста.</p>
+      <div class="menu-pane" id="pane-dessert" role="tabpanel" aria-labelledby="tab-pane-dessert" tabindex="0">
+        <p class="dessert-note">Десерты и выпечка — каждый день свежие: наполеон, медовик, морковный торт, «Орео», «Рафаэлло», «Манхэттен», эклеры и печенье. Актуальный ассортимент и цены уточняйте у бариста.</p>
         <div class="gallery-grid">
-          <a href="assets/g-napoleon.jpg" target="_blank" rel="noopener"><img src="assets/g-napoleon.jpg" alt="Наполеон собственного производства" loading="lazy"></a>
+          <a href="assets/g-napoleon.jpg" target="_blank" rel="noopener"><img src="assets/g-napoleon.jpg" alt="Наполеон" loading="lazy"></a>
           <a href="assets/g-carrotcake.jpg" target="_blank" rel="noopener"><img src="assets/g-carrotcake.jpg" alt="Морковный торт" loading="lazy"></a>
           <a href="assets/g-desserts.jpg" target="_blank" rel="noopener"><img src="assets/g-desserts.jpg" alt="Десерты и ягодный чай" loading="lazy"></a>
-          <a href="assets/g-cookies.jpg" target="_blank" rel="noopener"><img src="assets/g-cookies.jpg" alt="Печенье собственной выпечки" loading="lazy"></a>
+          <a href="assets/g-cookies.jpg" target="_blank" rel="noopener"><img src="assets/g-cookies.jpg" alt="Печенье" loading="lazy"></a>
         </div>
       </div>
     </div>
@@ -366,7 +392,7 @@
       <div class="reviews-summary">
         <div class="score">
           <div class="num">5,0</div>
-          <div class="stars">★★★★★</div>
+          <div class="stars" aria-hidden="true">★★★★★</div><span class="sr-only">Оценка 5 из 5.</span>
           <div class="cnt">460 оценок · 231 отзыв<br>на Яндекс Картах</div>
         </div>
         <div class="aspects">
@@ -381,32 +407,32 @@
       <div class="reviews-grid">
         <article class="review">
           <div class="head"><span class="name">Олеся Коваленко</span><span class="date">31 мая</span></div>
-          <div class="stars">★★★★★</div>
+          <div class="stars" aria-hidden="true">★★★★★</div><span class="sr-only">Оценка 5 из 5.</span>
           <p>«Заведение просто супер! Во-первых, много мест, где можно поставить телефон на зарядку, есть столики для компании, так и место для одного коворкера, еда вкусная, кофе вообще бомба!»</p>
         </article>
         <article class="review">
           <div class="head"><span class="name">Дарья</span><span class="date">6 декабря 2024</span></div>
-          <div class="stars">★★★★★</div>
+          <div class="stars" aria-hidden="true">★★★★★</div><span class="sr-only">Оценка 5 из 5.</span>
           <p>«Как только заходишь, взгляд падает на интерьер, который продуман до мелочей: живые растения, необычные картины, множество подсветок, большие и очень удобные стулья… Отличное место для встреч с друзьями и долгих разговоров по душам за чашечкой кофе и вкусным десертиком».</p>
         </article>
         <article class="review">
           <div class="head"><span class="name">Александр Я.</span><span class="date">26 сентября 2025</span></div>
-          <div class="stars">★★★★★</div>
+          <div class="stars" aria-hidden="true">★★★★★</div><span class="sr-only">Оценка 5 из 5.</span>
           <p>«Великолепное место! Кофе и подход к делу на высоте! Пожалуй, лучшее место во всей, не побоюсь этого слова, области! Если придётся ради кофе свернуть с маршрута, готов на „крюк“, чтобы отведать прекрасный вкус и побыть в уютной обстановке!»</p>
         </article>
         <article class="review">
           <div class="head"><span class="name">Дмитрий С.</span><span class="date">11 января 2025</span></div>
-          <div class="stars">★★★★★</div>
+          <div class="stars" aria-hidden="true">★★★★★</div><span class="sr-only">Оценка 5 из 5.</span>
           <p>«Удобное место расположения, много парковочных мест. Внутри уютно, дизайн неброский и продуманный. Варят хороший кофе, выбор сладкого хоть и небольшой, но всё вкусное. Есть возможность перекусить сэндвичами. По соотношению цена-качество считаю 5 из 5».</p>
         </article>
         <article class="review">
           <div class="head"><span class="name">Жанна Юдина</span><span class="date">2 июля</span></div>
-          <div class="stars">★★★★★</div>
+          <div class="stars" aria-hidden="true">★★★★★</div><span class="sr-only">Оценка 5 из 5.</span>
           <p>«Живу рядом, захожу периодически, вкусные сэндвичи и кофе, беру и бамбл, и капучино, и американо, также вкусный медовик и выпечка орешки».</p>
         </article>
         <article class="review">
           <div class="head"><span class="name">Ксавье Мария</span><span class="date">8 сентября 2025</span></div>
-          <div class="stars">★★★★★</div>
+          <div class="stars" aria-hidden="true">★★★★★</div><span class="sr-only">Оценка 5 из 5.</span>
           <p>«Очень вкусно, очень уютно, красиво внутри и невероятно круто всё по музыке. Я живу в Волгограде и даже там далеко не везде можно удачно попить кофе. Здесь же, что бы я ни брала — всё на высоком уровне».</p>
         </article>
       </div>
@@ -423,20 +449,33 @@
         <div class="kicker">Контакты</div>
         <h2>Ждём в гости</h2>
       </div>
+
+      <div class="venues">
+        <div class="venue is-primary">
+          <div class="city">Волжский</div>
+          <div class="addr">ул. Мира, 112</div>
+          <div class="meta">31-й микрорайон, рядом с храмом Серафима Саровского</div>
+          <div class="meta">Ежедневно 7:00–23:00</div>
+          <div class="meta"><a href="tel:+79370981101">+7 (937) 098-11-01</a></div>
+        </div>
+        <div class="venue">
+          <div class="city">Волгоград</div>
+          <div class="addr">проспект имени В. И. Ленина, 92</div>
+          <div class="meta">Наша небольшая кофейня в центре города</div>
+          <div class="pending">Часы работы и телефон — уточняйте у бариста</div>
+        </div>
+      </div>
+
       <div class="contacts-grid">
         <div>
           <div class="contact-item">
-            <div class="lbl">Адрес</div>
-            <div class="val">Волжский, ул. Мира, 112</div>
-            <div class="hint">31-й микрорайон, рядом с храмом Серафима Саровского</div>
-          </div>
-          <div class="contact-item">
             <div class="lbl">Телефон</div>
             <div class="val"><a href="tel:+79370981101">+7 (937) 098-11-01</a></div>
+            <div class="hint">Кофейня в Волжском</div>
           </div>
           <div class="contact-item">
             <div class="lbl">Время работы</div>
-            <div class="val">Ежедневно с 7:00 до 23:00</div>
+            <div class="val">Волжский — ежедневно с 7:00 до 23:00</div>
           </div>
           <div class="contact-item">
             <div class="lbl">Хорошо знать</div>
@@ -444,7 +483,7 @@
           </div>
           <div style="margin-top:26px; display:flex; gap:12px; flex-wrap:wrap">
             <a class="btn btn-solid" href="tel:+79370981101">Позвонить</a>
-            <a class="btn btn-ghost" href="https://yandex.ru/maps/org/bolshoy_kofe/24043248419/" target="_blank" rel="noopener">Построить маршрут</a>
+            <a class="btn btn-ghost" href="https://yandex.ru/maps/org/bolshoy_kofe/24043248419/" target="_blank" rel="noopener">Маршрут в Волжский</a>
           </div>
         </div>
         <div class="map-wrap">
@@ -458,7 +497,7 @@
 <footer>
   <div class="container footer-inner">
     <img src="assets/favicon-192.png" alt="Логотип «Большой кофе»" width="44" height="44">
-    <div class="fb">Кофейня «Большой кофе» · EST 2017<br>Волжский, ул. Мира, 112</div>
+    <div class="fb">Кофейня «Большой кофе» · EST 2017<br>Волжский, ул. Мира, 112 · Волгоград, пр. Ленина, 92</div>
     <div class="links">
       <a href="https://yandex.ru/maps/org/bolshoy_kofe/24043248419/" target="_blank" rel="noopener">Яндекс Карты</a>
       <a href="tel:+79370981101">+7 (937) 098-11-01</a>
@@ -472,7 +511,9 @@ document.querySelectorAll('.menu-tab').forEach(function (tab) {
   tab.addEventListener('click', function () {
     document.querySelectorAll('.menu-tab').forEach(function (t) { t.classList.remove('active'); });
     document.querySelectorAll('.menu-pane').forEach(function (p) { p.classList.remove('active'); });
+    document.querySelectorAll('.menu-tab').forEach(function (t) { t.setAttribute('aria-selected', 'false'); });
     tab.classList.add('active');
+    tab.setAttribute('aria-selected', 'true');
     document.getElementById(tab.dataset.pane).classList.add('active');
   });
 });
@@ -484,7 +525,10 @@ toggle.addEventListener('click', function () {
   toggle.setAttribute('aria-expanded', open);
 });
 links.querySelectorAll('a').forEach(function (a) {
-  a.addEventListener('click', function () { links.classList.remove('open'); });
+  a.addEventListener('click', function () {
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  });
 });
 </script>
 </body>

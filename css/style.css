@@ -1,4 +1,4 @@
-/* «Большой кофе» — Волгоград */
+/* «Большой кофе» — Волжский и Волгоград */
 :root {
   --bg: #211e1b;
   --panel: #2a2622;
@@ -15,7 +15,14 @@
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-section[id] { scroll-margin-top: 76px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
 body {
   font-family: "Manrope", "Segoe UI", system-ui, sans-serif;
   background: var(--bg);
@@ -55,7 +62,7 @@ header {
 .nav-links a { color: var(--cream); font-weight: 500; font-size: .95rem; }
 .nav-links a:hover { color: var(--amber); }
 .nav-phone { white-space: nowrap; font-weight: 700; color: var(--amber); }
-.nav-toggle { display: none; margin-left: auto; background: none; border: 0; color: var(--cream); font-size: 1.6rem; cursor: pointer; }
+.nav-toggle { display: none; width: 44px; height: 44px; place-items: center; margin: 0 -10px 0 auto; background: none; border: 0; color: var(--cream); font-size: 1.6rem; cursor: pointer; }
 
 /* Hero */
 .hero {
@@ -111,9 +118,9 @@ header {
 .menu-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 48px; }
 .menu-group h3 { font-size: 1.15rem; font-weight: 600; margin: 26px 0 12px; color: var(--ink); }
 .menu-group h3:first-child { margin-top: 0; }
-.menu-group.col-continued { padding-top: 41px; }
+.menu-group.col-continued { padding-top: calc(1.15rem * 1.6 + 12px); }
 .mi { display: flex; align-items: baseline; gap: 8px; padding: 6px 0; border-bottom: 1px dashed #d8d2c4; }
-.mi:last-child { border-bottom: 0; }
+.mi:last-of-type { border-bottom: 0; }
 .mi .n { font-weight: 600; font-size: .95rem; }
 .mi .d { display: block; font-weight: 400; color: var(--ink-soft); font-size: .8rem; line-height: 1.45; }
 .mi .vol { color: var(--ink-soft); font-size: .8rem; white-space: nowrap; }
@@ -128,6 +135,21 @@ header {
 .mtable td:first-child { text-align: left; font-weight: 600; padding-left: 0; white-space: normal; }
 .mtable td .vol { color: var(--ink-soft); font-weight: 400; font-size: .8rem; margin-left: 6px; white-space: nowrap; }
 .mtable td.na { color: var(--ink-soft); font-weight: 400; }
+/* На узких экранах таблица с двумя ценами превращается в карточки,
+   иначе колонки с ценами уезжают за пределы экрана. */
+@media (max-width: 700px) {
+  .mtable-wrap { overflow-x: visible; }
+  .mtable { min-width: 0; }
+  .mtable thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .mtable tr { display: block; padding: 12px 0; border-top: 1px dashed #d8d2c4; }
+  .mtable td { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; padding: 3px 0; border: 0; text-align: right; white-space: normal; }
+  .mtable td:first-child { display: block; font-size: 1rem; margin-bottom: 4px; }
+  .mtable td:not(:first-child)::before {
+    content: attr(data-label); font-weight: 500; color: var(--ink-soft);
+    font-size: .82rem; text-align: left; white-space: nowrap;
+  }
+  .mtable td .vol { display: block; margin-left: 0; }
+}
 .menu-cat-photo { border-radius: var(--radius); overflow: hidden; margin-bottom: 26px; }
 .menu-cat-photo img { width: 100%; height: 240px; object-fit: cover; }
 .dessert-note { color: var(--ink-soft); font-size: .95rem; max-width: 640px; margin-bottom: 22px; }
@@ -164,6 +186,18 @@ header {
 
 /* Contacts */
 .contacts-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 40px; }
+.venues { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 34px; }
+.venue {
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 22px; display: flex; flex-direction: column; gap: 6px;
+}
+.venue.is-primary { border-color: var(--amber); }
+.venue .city { color: var(--amber); font-family: "Oswald", sans-serif; text-transform: uppercase; font-size: .82rem; letter-spacing: .12em; font-weight: 600; }
+.venue .addr { font-size: 1.1rem; font-weight: 600; }
+.venue .meta { color: var(--muted); font-size: .9rem; }
+.venue .meta a { color: var(--cream); font-weight: 600; }
+.venue .meta a:hover { color: var(--amber); }
+.venue .pending { color: var(--muted); font-size: .88rem; font-style: italic; }
 .contact-item { padding: 18px 0; border-bottom: 1px solid var(--line); }
 .contact-item:first-child { padding-top: 0; }
 .contact-item .lbl { color: var(--muted); font-size: .82rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 4px; }
@@ -182,7 +216,7 @@ footer { border-top: 1px solid var(--line); padding: 34px 0; }
 .footer-inner .links { margin-left: auto; display: flex; gap: 18px; font-size: .9rem; }
 
 @media (max-width: 900px) {
-  .about-grid, .contacts-grid { grid-template-columns: 1fr; }
+  .about-grid, .contacts-grid, .venues { grid-template-columns: 1fr; }
   .menu-cols { grid-template-columns: 1fr; }
   .menu-group.col-continued { padding-top: 0; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
@@ -193,7 +227,7 @@ footer { border-top: 1px solid var(--line); padding: 34px 0; }
     border-bottom: 1px solid var(--line);
   }
   .nav-links.open { display: flex; }
-  .nav-toggle { display: block; }
+  .nav-toggle { display: grid; }
   .nav-phone { display: none; }
   section { padding: 54px 0; }
 }

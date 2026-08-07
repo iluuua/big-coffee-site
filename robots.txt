@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /README.md
 
 Sitemap: https://iluuua.github.io/big-coffee-site/sitemap.xml
